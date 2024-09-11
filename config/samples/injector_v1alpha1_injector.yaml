@@ -1,0 +1,9 @@
+apiVersion: injector.dev.lestaat/v1alpha1
+kind: Injector
+metadata:
+  labels:
+    app.kubernetes.io/name: go-injector-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: injector-sample
+spec:
+  # TODO(user): Add fields here
