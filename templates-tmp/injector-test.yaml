@@ -1,0 +1,9 @@
+apiVersion: injector.dev.lestaat/v1alpha1
+kind: Injector
+metadata: 
+  name: test
+  namespace: injector
+spec:
+  imageTag: alpine
+
+

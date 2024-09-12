@@ -29,13 +29,16 @@ type InjectorSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Injector. Edit injector_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// Foo string `json:"foo,omitempty"`
+	//kubuilder:validation:Pattern=`^[-a-z0-9]*$`
+	ImageTag string `json:"imageTag"`
 }
 
 // InjectorStatus defines the observed state of Injector
 type InjectorStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Conditions []metav1.Condition `json:"conditions,omitempty"`
 }
 
 // +kubebuilder:object:root=true
